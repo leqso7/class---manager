@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +80,9 @@
         function approveAccess() {
             const uniqueCode = localStorage.getItem('lastRequestCode');
             
+            // ვავამატოთ დროის დაყენება
+            localStorage.setItem('remainingTime', '31523908');
+            
             // ვინახავთ წვდომის ინფორმაციას IndexedDB-ში
             const request = indexedDB.open('siteAccess', 1);
             
@@ -157,7 +161,7 @@
             const uniqueCode = localStorage.getItem('uniqueCode');
             
             // თუ წვდომა აქვს და საიტი არ არის shutdown
-            if (accessApproved && siteStatus !== 'shutdown' && uniqueCode) {
+            if (accessApproved === 'true' && siteStatus !== 'shutdown' && uniqueCode) {
                 if (window.location.pathname.includes('request.html')) {
                     window.location.replace('index.html');
                 }
@@ -175,7 +179,21 @@
         setInterval(checkAccessStatus, 30000);
     </script>
 
-
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/class-and-class/sw.js', {
+                    scope: '/class-and-class/'
+                })
+                .then(registration => {
+                    console.log('ServiceWorker დარეგისტრირდა:', registration.scope);
+                })
+                .catch(error => {
+                    console.log('ServiceWorker რეგისტრაცია ვერ მოხერხდა:', error);
+                });
+            });
+        }
+    </script>
 
     <style>
         @keyframes gradient {
