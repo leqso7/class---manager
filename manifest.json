@@ -1,20 +1,24 @@
 {
     "name": "კლასის მენეჯერი",
     "short_name": "კლასის მენეჯერი",
-    "start_url": "/",
+    "start_url": "/gogo/",
+    "scope": "/gogo/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4CAF50",
+    "description": "კლასის მენეჯერი აპლიკაცია",
     "icons": [
       {
-        "src": "icon-192x192.png",
+        "src": "/gogo/icon-192x192.png",
         "sizes": "192x192",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any maskable"
       },
       {
-        "src": "icon-512x512.png",
+        "src": "/gogo/icon-512x512.png",
         "sizes": "512x512",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any maskable"
       }
     ]
   }
