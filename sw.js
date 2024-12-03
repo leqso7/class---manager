@@ -1,9 +1,9 @@
 const cacheName = 'site-cache-v1';
 const filesToCache = [
-  '/',
-  '/index.html',
-  '/icon-192x192.png',
-  '/icon-512x512.png',
+  '/gogo/', // Root გვერდი რეპოზიტორიისთვის
+  '/gogo/index.html', // მთავარი გვერდი
+  '/gogo/icon-192x192.png', // აიკონები
+  '/gogo/icon-512x512.png',
 ];
 
 self.addEventListener('install', (event) => {
