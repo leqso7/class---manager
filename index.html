@@ -932,7 +932,7 @@ button {
           <input type="text" id="nameInput" placeholder="შეიყვანეთ მოსწავლის სახელი">
           <button id="addNameButton">დამატება</button>
       </div>
-      <button id="selectStudentButton">მოოსწავლის არჩევა</button>
+      <button id="selectStudentButton">მოოსწავლის ��რჩევა</button>
       <button id="pairStudentsButton" class="pairing-button">კლასების დამატება</button>
       <div id="nameCounter">სულ სტუდენტები:</div>
       <div id="nameList" class="name-list" style="max-height: 1183px;"><div class="name">
@@ -2298,7 +2298,7 @@ async function checkPassword() {
      const shutdownVideo = document.getElementById('shutdownVideo');
      shutdownVideo.style.display = 'none'; // ვიდეო გაქრეს
  } else { 
-     alert('არასორი პაროლი. სცადეთ ხელახლა.'); 
+     alert('არ��სორი პაროლი. სცადეთ ხელახლა.'); 
  } 
 }
 
@@ -2818,7 +2818,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
   addShortcutButton.addEventListener('mouseout', () => {
     tooltip.style.visibility = 'hidden';
     tooltip.style.opacity = '0';
-    tooltip.style.transform = 'translateY(10px)'; // ნაზად ჩამოსვლა
+    tooltip.style.transform = 'translateY(10px)'; // ნაზად ჩამ��სვლა
   });
 
   // ღილაკზე დაჭერისას ტექსტის დამალვა
@@ -2830,7 +2830,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
     addShortcutButton.remove(); // ღილაკის წაშლა
     deferredPrompt.prompt(); // მოთხოვნის გამოჩენა
 
-    deferredPrompt.userChoice.then((c!hoiceResult) => {
+    deferredPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
         alert('Shortcut დაემატა!');
       } else {
