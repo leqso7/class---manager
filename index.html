@@ -957,7 +957,7 @@ button {
   <script>
      if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('/gogo/sw.js')
                 .then((registration) => {
                     console.log('ServiceWorker registration successful');
                 })
@@ -2830,7 +2830,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
     addShortcutButton.remove(); // ღილაკის წაშლა
     deferredPrompt.prompt(); // მოთხოვნის გამოჩენა
 
-    deferredPrompt.userChoice.then((choiceResult) => {
+    deferredPrompt.userChoice.then((c!hoiceResult) => {
       if (choiceResult.outcome === 'accepted') {
         alert('Shortcut დაემატა!');
       } else {
